@@ -1,20 +1,13 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv'
+import ConnectDB from './database/db.js';
 const app = express();
 dotenv.config();
 app.use(express.json());
 
 
-
-
-app.get("/" , (req,res)=>{
-     
-    return res.json({
-          
-       message:"this is get request"
-    })
-})
+ConnectDB();
 
 
 
